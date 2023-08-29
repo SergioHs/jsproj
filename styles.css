@@ -1,0 +1,100 @@
+/* Estilos para o Banner */
+#banner {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#bannerImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bannerText {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+#prevButton,
+#nextButton,
+#stop {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#prevButton:hover,
+#nextButton:hover,
+#stop:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para os Comentários */
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o formulário */
+#postForm {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#postForm h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#postForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#postForm input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#postForm button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#postForm button[type="submit"]:hover {
+    background-color: #219651;
+}
+.centered-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.centered-title h1 {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    color: #333;
+}
