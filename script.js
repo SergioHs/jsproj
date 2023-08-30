@@ -38,8 +38,6 @@ carregaComentarios();
 const imagemDoBanner = document.getElementById('bannerImage');
 const textoDoBanner = document.getElementById('bannerText');
 
-console.log(imagemDoBanner);
-
 const dadosDoBanner = [
     {image: 'https://placehold.co/600x400?text=Banner1', text: 'Primeiro banner'},
     {image: 'https://placehold.co/600x400?text=Banner2', text: 'Segundo banner'},
@@ -71,21 +69,35 @@ function nextClicked(){
     atualizaBanner(indiceBannerAtual);
 }
 
-const myInterval = setInterval(nextClicked, 1000);
+//crio um intervalo que se repete em 1000 milisegundos, invocando a função nextClicked
+let myInterval = setInterval(nextClicked, 1000);
 
+//Função para parar o intervalo myInterval 
 function myStopFunction() {
     clearInterval(myInterval);
 }
-
-
-
-/*function prevClicked(){
-    indiceBannerAtual = ((indiceBannerAtual - 1) + dadosDoBanner.length) % dadosDoBanner.length;
-    console.log(indiceBannerAtual);
-    atualizaBanner(indiceBannerAtual);
+// função para reiniciar o myInterval
+function myResumeFunction() {
+    myInterval = setInterval(nextClicked, 1000);
 }
 
-function nextClicked(){
-    indiceBannerAtual = (indiceBannerAtual + 1) % dadosDoBanner.length;
-    atualizaBanner(indiceBannerAtual);
-}*/
+//função de POST para criar um comentario
+async function createNewComment(event){
+    
+    const tituloForm = document.getElementById('postTitle').value;
+    const corpoForm = document.getElementById('postBody').value;
+
+    const respostaDaRequisicao = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method : 'POST',
+        body: JSON.stringify({
+            title: tituloForm,
+            body: corpoForm,
+            userId: 1,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then((respostaDaRequisicao) => respostaDaRequisicao.json())
+    .then((json) => console.log(json))
+}

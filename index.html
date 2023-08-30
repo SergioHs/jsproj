@@ -14,13 +14,12 @@
         </header>
         
         <section id="banner">
-            <img id="bannerImage" src="https://placehold.co/600x400?text=Banner1" alt="Banner Image">
+            <!-- na tag de imagem, adicionamos dois eventos quando o mouse está acima ou quando sai de cima da imagem invocando funções respectivas -->
+            <img onmouseover="myStopFunction()" onmouseleave="myResumeFunction()" id="bannerImage" src="https://placehold.co/600x400?text=Banner1" alt="Banner Image">
             <p id="bannerText">Texto do Banner</p>
             <button id="prevButton" onclick="prevClicked()">Anterior</button>
             <button id="nextButton" onclick="nextClicked()">Próximo</button>
-            <button id="stop" onclick="myStopFunction()">STOP</button>
         </section>
-
 
         <form id="postForm" onsubmit="createNewComment(event)">
             <h2>Criar Novo Post</h2>
