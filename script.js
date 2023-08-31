@@ -101,5 +101,3 @@ async function createNewComment(event){
     .then((respostaDaRequisicao) => respostaDaRequisicao.json())
     .then((json) => console.log(json))
 }
-
-console.log('teste');
